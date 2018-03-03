@@ -15,14 +15,14 @@ var ChangeReqSchema = mongoose.Schema({
         required: true
     },
     Text:{
-        type: Text,
+        type: String,
         required: true
     },
     status:{
         type: String,
         default: "pedning"
     }
-    
+
 })
 
 module.exports = mongoose.model('changereq', ChangeReqSchema);
