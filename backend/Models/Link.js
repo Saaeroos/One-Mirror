@@ -1,6 +1,7 @@
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var AdminSchema = mongoose.Schema({
+var AdminSchema = new Schema({
 
     StudentID:{
         type: String,
@@ -26,7 +27,7 @@ var AdminSchema = mongoose.Schema({
         type: String,
         defualt: "pending"
     }
-    
+
 })
 
-module.exports = mongoose.model('admin', AdminSchema);
+module.exports = mongoose.model('Admin', AdminSchema);

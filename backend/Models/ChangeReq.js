@@ -1,6 +1,7 @@
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var ChangeReqSchema = mongoose.Schema({
+var ChangeReqSchema = new Schema({
 
     StudentID:{
         type: String,
@@ -15,14 +16,14 @@ var ChangeReqSchema = mongoose.Schema({
         required: true
     },
     Text:{
-        type: Text,
+        type: String,
         required: true
     },
     status:{
         type: String,
-        default: "pedning"
+        default: "pending"
     }
-    
+
 })
 
-module.exports = mongoose.model('changereq', ChangeReqSchema);
+module.exports = mongoose.model('Changereq', ChangeReqSchema);
