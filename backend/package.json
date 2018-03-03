@@ -1,4 +1,4 @@
-{
+
   "name": "backend",
   "version": "1.0.0",
   "description": "One Mirror app",
@@ -9,6 +9,11 @@
   "author": "me",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.0.3",
+    "mongoose": "^5.0.7"
   }
 }
