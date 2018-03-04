@@ -5,6 +5,10 @@ class AdminDashboard extends Component {
   {
     window.location.href='/admin/addscore';
   }
+  handleEdit()
+  {
+    window.location.href='/admin/editdetails';
+  }
 render(){
   return (
   <div>
@@ -27,7 +31,7 @@ render(){
           <tr>
             <th scope="row">12453</th>
             <td colSpan={3}>Jac Thon</td>
-            <td><button type="button"  className="btn btn-primary" >Edit</button></td>
+            <td><button type="button"  className="btn btn-primary" onClick={this.handleEdit}>Edit</button></td>
             <td><button type="button"  className="btn btn-info" >view Profile</button></td>
             <td><button type="button" className="btn btn-success" onClick={this.handleAddscore}>Add Score</button></td>
 
@@ -35,14 +39,14 @@ render(){
           <tr>
             <th scope="row">22354</th>
             <td colSpan={3}>Jacob Thornton</td>
-            <td><button type="button" className="btn btn-primary">Edit</button></td>
+            <td><button type="button" className="btn btn-primary" onClick={this.handleEdit}>Edit</button></td>
             <td><button type="button" className="btn btn-info">view Profile</button></td>
             <td><button type="button" className="btn btn-success" onClick={this.handleAddscore}>Add Score</button></td>
           </tr>
           <tr>
             <th scope="row">32653</th>
             <td colSpan={3}>Larry the Bird</td>
-            <td><button type="button" className="btn btn-primary">Edit</button></td>
+            <td><button type="button" className="btn btn-primary" onClick={this.handleEdit}>Edit</button></td>
             <td><button type="button" className="btn btn-info">view Profile</button></td>
             <td><button type="button" className="btn btn-success" onClick={this.handleAddscore}>Add Score</button></td>
           </tr>
