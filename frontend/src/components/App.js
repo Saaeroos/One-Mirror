@@ -8,6 +8,7 @@ import AdminDashboard from './AdminDashboard';
 import AddScore from './AddScore';
 
 import StudentLogin from './StudentLogin';
+import StudentProfile from './StudentProfile';
 
 class App extends Component {
     render() {
@@ -22,6 +23,7 @@ class App extends Component {
                     <Route exact path='/' component={HomePage} />
                     <Route path='/studentlogin' component={StudentLogin} />
                     <Route path='/admin' component={AdminLog} />
+                    <Route path='/student/profile' component={StudentProfile} />
                     <Route render={function(){
                         return <p> Not Found</p>
                     }} />

@@ -42,13 +42,13 @@ app.get('/test',function(req,res){
 })
 
 
-//Input validation///////////////////////////////////////////////////////
+//Input validation-///////////////////////////////////////////////////////
 
 validateStudentId= [
   check('studId','Please enter a student ID ').not().isEmpty(),
 
 ]
-
+//Home Page///////////////////////////////////////////////////////
 app.post('student/search',validateStudentId,function(req,res){
   const errors = validationResult(req);
   if(!errors.isEmpty()){
@@ -68,6 +68,10 @@ app.post('student/search',validateStudentId,function(req,res){
     res.send({error: 'error', message: 'Something went wrong'});
   })
 })
+
+// Student Profile Page 
+
+
 
 // student Login
 
