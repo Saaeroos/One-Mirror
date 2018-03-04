@@ -8,6 +8,7 @@ import AdminDashboard from './AdminDashboard';
 import AddScore from './AddScore';
 
 import StudentLogin from './StudentLogin';
+import StudentDashboard from './StudentDashboard';
 
 class App extends Component {
     render() {
@@ -20,8 +21,9 @@ class App extends Component {
                     <Route path='/admin/addscore' component={AddScore}/>
                     <Route path='/admin/student/register' component={AdminStReg} />
                     <Route exact path='/' component={HomePage} />
-                    <Route path='/studentlogin' component={StudentLogin} />
+                    <Route path='/student/login' component={StudentLogin} />
                     <Route path='/admin' component={AdminLog} />
+                    <Route path='/student/dashboard' component={StudentDashboard} />
                     <Route render={function(){
                         return <p> Not Found</p>
                     }} />
