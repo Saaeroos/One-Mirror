@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(cors({
     origin:['http://localhost:3000'],
     methods:['GET','POST', 'DELETE', 'PUT'],
-    credentials: true // enable set cookie
+    credentials: true // enablae set cookie
 }));
 
 // Session - Middelware
