@@ -234,7 +234,7 @@ class AdminStReg extends Component {
                                     <option key={2} value='graduated'>graduated</option>
                                     <option key={3} value='dropout'>dropout</option>
                                 </select>
-                                
+
                                 <p className="text-danger">{this.state.error.status}</p>
 
                             </div>

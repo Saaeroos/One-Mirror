@@ -57,6 +57,7 @@ class AdminNav extends Component {
             <NavLink to="/admin/dashboard" className="nav-item nav-link">List of Students</NavLink>
             <NavLink to="/admin/student/register" className="nav-item nav-link">Registration</NavLink>
             <NavLink to="/admin/student/class" className="nav-item nav-link">Student Classes</NavLink>
+            <NavLink to="/admin/student/changerequests" className="nav-item nav-link"> View Change Requests</NavLink>
 
           </ul>
 
@@ -81,4 +82,3 @@ class AdminNav extends Component {
 }
 
 export default AdminNav
-

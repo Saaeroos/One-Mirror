@@ -23,8 +23,8 @@ var nodemailer = require('nodemailer');
 // seperate routes for admin student classes
 var StudentClassRoutes = require('./routes/StudentClassRoutes');
 
-//mongoose.connect('mongodb://localhost:27017/one_mirror');
-mongoose.connect('mongodb://test:test@ds141068.mlab.com:41068/one-mirror');
+mongoose.connect('mongodb://localhost:27017/one_mirror');
+//mongoose.connect('mongodb://test:test@ds141068.mlab.com:41068/one-mirror');
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {

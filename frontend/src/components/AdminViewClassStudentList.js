@@ -25,14 +25,14 @@ class AdminViewClassStudentList extends Component {
   }
   handleProfileClick() {
     this.props.history.push({
-      pathname: '/student/profile',
+      pathname: '/student/this.state.studentsprofile',
       state: { detail: this.state.students }
     });
   }
 
   componentDidMount() {
     let _this = this;
-    
+
     axios.get(`http://localhost:8080/api/admin/student/class/${this.props.match.params.id}/students`)
       .then((response) => {
         if (response.data.error) {

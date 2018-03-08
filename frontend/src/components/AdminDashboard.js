@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import AdminNav from './AdminNav';
+import Header from './Header';
+import Footer from './Footer';
 
 
 class AdminDashboard extends Component {
@@ -14,7 +16,7 @@ class AdminDashboard extends Component {
       loading: true
 
     }
-    this.handleProfileClick=this.handleProfileClick.bind(this);
+
   }
   handleAddscore() {
     window.location.href = '/admin/addscore';
@@ -23,12 +25,7 @@ class AdminDashboard extends Component {
   {
     window.location.href='/admin/editdetails';
   }
-  handleProfileClick(){
-    this.props.history.push({
-      pathname: '/student/profile',
-      state: { detail: this.state.students }
-    });
-  }
+
 
   componentDidMount() {
     let _this = this;
@@ -48,13 +45,16 @@ class AdminDashboard extends Component {
   }
 
   render() {
+
+
     let _this = this;
     console.log(this.state.students);
     return (
       <div>
+      <Header />
         <AdminNav />
         <h1>Admin Dashboard</h1>
-       
+
         <div className="table-responsive-md">
           <table className="table table-hover">
             <thead>
@@ -81,7 +81,9 @@ class AdminDashboard extends Component {
                     <td colSpan={3}>{student.FirstName} {student.LastName}</td>
 
                     <td><Link className="btn btn-primary" to={`/admin/${student.StudentID}/editdetails`}>Edit</Link></td>
-                    <td><a className="btn btn-danger" onClick={this.handleProfileClick}>View Profile</a></td>
+                     <td><Link className="btn btn-primary" to={`/student/profile/${student.StudentID}`}>View Profile</Link></td>
+
+                    {/* <td><a className="btn btn-danger" onClick={handleProfileClick}>View Profile</a></td> */}
                     <td><Link className="btn btn-success" to={`/admin/${student.StudentID}/addscore`}>Add Scores</Link></td>
                   </tr>
                 )
@@ -89,9 +91,10 @@ class AdminDashboard extends Component {
         </tbody>
       </table>
     </div>
-  </div>
-  )
+  <Footer/>
+</div>
 
+    )
   }
 }
 export default AdminDashboard;
